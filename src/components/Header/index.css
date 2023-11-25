@@ -1,0 +1,31 @@
+.headercontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c364c;
+}
+.headtwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.li{
+    margin-right: 16%;
+    font-size: 20px;
+    border: none;
+}
+.logbut{
+    border:none;
+    border-radius: 5px;
+    padding:10px;
+    background-color: rgb(77, 77, 245);
+    margin-right: 5%;
+    color:white;
+   
+}
+.headone{
+    margin-left: 5%;
+    padding-top: 1%;
+}
