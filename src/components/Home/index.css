@@ -1,0 +1,26 @@
+.homeone{
+    margin:0px;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+ min-height:90vh;
+  color: white;
+  background-size: cover;
+}
+.hometwo{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width:50vw;
+  padding-top: 25vh;
+  padding-left: 6vw;
+}
+.findjobs{
+  background-color: rgb(68, 68, 235);
+  color:white;
+  border-radius: 5px;
+  padding:12px;
+  outline:none;
+  border: none;
+  font-size: 20px;
+  font-style: oblique;
+}
