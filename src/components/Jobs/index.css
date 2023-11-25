@@ -1,0 +1,80 @@
+.jobcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width:100%;
+    padding-left: 80px;
+    padding-top: 20px;
+    background-color: rgb(27, 27, 27);
+    background-size: cover;
+    
+}
+.jobone{
+    max-width:40%;
+}
+.jobtwo{
+    max-width:40%;
+    margin-left: 5%;
+    
+}
+.profilecontainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    width: 20vw;
+    border-radius: 12px;
+    padding: 10px;
+    
+}
+hr{
+    background-color:rgb(215, 209, 209);
+    height:2px;
+    border: none;
+    border-radius: 3px;
+}
+.empinner{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    margin-right: 10px;
+    color:white;
+}
+.jobtwoone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height:5vh;
+    outline: none;
+    width:20vw;
+}
+.nojobs{
+    width:50vw;
+    height:100vh;
+    background-size: cover;
+}
+.searchval{
+    background-color: black;
+    outline:none;
+    border:none;
+    width:20vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color:white;
+}
+.mag{
+    height:5vh;
+    width:4vw;
+    outline:none;
+    border:none;
+    background-color: black;
+   
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.load{
+   padding-top:50vh;
+   padding-left: 45vw;
+}
