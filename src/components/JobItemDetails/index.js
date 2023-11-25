@@ -1,18 +1,22 @@
 import { Component } from "react";
 import Cookies from "js-cookie";
 import Loader from "react-loader-spinner";
-import Jobdescription from "../../Jobdescription";
+import Header from '../Header'
+import Similarjobs from '../Similarjobs'
+import './index.css'
 class JobItemDetails extends Component{
     state={
         isLoading:true,
         list1:[],
-        list2:[],
+      
     }
     componentDidMount=()=>{
         this.getJObsDescription()
     }
+
     getJObsDescription=async ()=>{
-        this.setState({isLoading:false})
+        //.setState({isLoading:false})
+      
         const token=Cookies.get('token')
         const{match}=this.props
         const{params}=match
@@ -26,13 +30,15 @@ class JobItemDetails extends Component{
             method:'GET'
         }
         const response=await fetch(url,options)
+        const data=await response.json()
         if(response.ok===true)
         {
-        const data=await response.json()
+            this.setState({isLoading:false})
+        
         const updateddata={
             jobDetails:{
                 companyLogo:data.job_details.company_logo_url,
-                companywebsite:data.job_details.company_website_url,
+                companyWebsite:data.job_details.company_website_url,
                 employmentType:data.job_details.employment_type,
                 description:data.job_details.job_description,
                 title:data.job_details.title,
@@ -70,16 +76,73 @@ class JobItemDetails extends Component{
     }
     getDetails=()=>{
         const{list1}=this.state
-       const{jobDetails}=list1
-       const{companyLogo}=jobDetails
-       //const{companyLogo}=getDetails
+                    
+        const{jobDetails}=list1
+        const{lifeAtCompany}=jobDetails
+        const{skills}=jobDetails
+        const{similarJobs}=jobDetails
+         
+        const{describe,imagi}=lifeAtCompany     
+        const{companyLogo,title,companyWebsite,description,employmentType,rating,location}=jobDetails
+       
        
         return(
-            <div className="detailscontainer">
-                <div className="one">
-                   {/* <img src={companyLogo} alt="company" className="com"/>  */}
+            <div className="con">
+                <Header/>
+            <div className="maincontainer">
+                <div className="container1">
+                    <div className="innercontainer">
+                        <div className="logocon">
+                            <img src={companyLogo} alt="logo" className="logo"/>
+                            <div className="log1">
+                                <h1 style={{color:"white"}}>{title}</h1>
+                                <div className="rat">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1vpRJxxU53MUVYFP3yUB9zV7JLmreSmQNQ&usqp=CAU" className="star" alt="star"/>
+                                    <p style={{color:"white"}}>{rating}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="locatione">
+                        <div className="loc">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_lyMfnL4YqRAIDLeeyjNlPCD0NQ2zrdk9ug&usqp=CAU" className="loc" alt="location"/>
+                            <p style={{color:"white"}}>{location}</p>
+                        </div>
+                        <div className="location">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZO8RJIW7Ua5tuORmXRi_mhi6BV6kh-6M0ag&usqp=CAU" className="loc" alt="location"/>
+                            <p style={{color:"white"}}>{employmentType}</p>
+                        </div>
+                        </div>
+                        <hr/>
+                        <div className="des">
+                        <h1 style={{color:"white"}}>Description:</h1>
+                        <a href={companyWebsite}>Visit</a>
+                        </div>
+                        <p style={{color:"grey"}}>{description}</p>
+                        <h1 style={{color:"white"}}>Skills:</h1>
+                        <div className="skillcontainer">
+                            {skills.map((each)=>(
+                                <div className="skill">
+                                 <img src={each.imageurl} className="ima" alt="imagi"/>
+                                 <h2 style={{color:"grey",marginLeft:"20px"}}>{each.name}</h2>
+                                </div>
+                            ))}
+                        </div>
+                        <h1 style={{color:"white"}}>Life at Company</h1>
+                        <div className="life">
+                            <p style={{color:"grey"}}>{describe}</p>
+                            <img src={imagi} className="im" alt="life"/>
+                        </div>
+                    </div>
+                </div>
+                <h1 style={{color:"white",marginLeft:"200px"}}>Similar Jobs</h1>
+                <div className="container2">
+                          
+                        {similarJobs.map((each)=>(
+                            <Similarjobs each={each}/>
+                        ))}
                 </div>
             </div>
+        </div>
         )        
     }
     render(){
