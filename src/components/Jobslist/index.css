@@ -1,0 +1,54 @@
+.linki{
+    text-decoration: none;
+    
+}
+.rowone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+.joblist{
+    background-color: rgb(42, 38, 38);
+    min-height:50vh;
+    border-radius: 5px;
+    min-width:50vw;
+    padding:30px;
+    margin-top: 10px;
+    color:white;
+    
+}
+.loc,.star,.emp{
+    width:2vw;
+    height:2vh;
+   
+}
+
+.logo1{
+    width:8vw;
+    height:15vh;
+    margin-right: 10px;
+}
+.rowonetwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rowtwo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.location{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
