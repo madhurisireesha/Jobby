@@ -1,0 +1,81 @@
+.con{
+    margin:0px;
+    box-sizing: border-box;
+    background-color: rgb(7, 7, 7);
+}
+    
+.container1{
+    background-color: rgb(35, 33, 33);
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 80px;
+    min-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding:40px;
+}
+.logocon{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+.log1{
+    display: flex;
+    flex-direction: column;
+   
+    margin-left: 60px;
+}
+.rat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.loc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.locatione{
+    display: flex;
+    flex-direction: row;
+   align-items: center;  
+   justify-content: space-around;
+}
+.des{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skillcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.life{
+    display: flex;
+    flex-direction: row;
+}
+.container2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 160px;
+    margin-right: 200px;
+   
+    min-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding:40px;
+
+}
