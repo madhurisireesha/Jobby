@@ -146,7 +146,7 @@ getJobDetails=async()=>{
     }
    
      
-    if(response.status===401)
+    if(response.status===404)
     {
         <img src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png" alt="nojobs" className='nojobs'/>
     }
